@@ -11,14 +11,14 @@
             </div>
             <div class="media" ng-if="showDish">
                 <div class="media-left media-middle">
-                    <a href="#"><img class="media-object img-thumbnail" src="{{featuredImage}}" alt="{{featuredName}}"></a>
+                    <a href="#"><img class="media-object img-thumbnail" src="{{dish.image}}" alt="{{dish.name}}"></a>
                 </div>
                 <div class="media-body">
                     <h2 class="media-heading">
-                        {{featuredDish.featuredName}}  <span class="label label-danger">{{featuredLabel}}</span>
-                        <span class="badge">{{featuredPrice}}</span>
+                        {{dish.name}}  <span class="label label-danger">{{dish.label}}</span>
+                        <span class="badge">{{dish.price}}</span>
                     </h2>
-                    <p>{{featuredDescription}}</p>
+                    <p>{{dish.description}}</p>
                 </div>
             </div>
         </div>
@@ -32,14 +32,14 @@
         <div class="col-xs-12 col-sm-9">
             <div class="media">
                 <div class="media-body">
-                    <h2>{{promoName}}
-                        <span class="label label-danger"> {{promoLabel}}</span>
-                        <span class="badge">{{promoPrice}}</span>
+                    <h2>{{promotion.name}}
+                        <span class="label label-danger"> {{promotion.label}}</span>
+                        <span class="badge">{{promotion.price}}</span>
                     </h2>
-                    <p>{{promoDescription}}</p>
+                    <p>{{promotion.description}}</p>
                 </div>
                 <div class="media-left media-middle">
-                    <a href="#"><img class="media-object img-thumbnail" src="{{promoImage}}" alt="Buffet"></a>
+                    <a href="#"><img class="media-object img-thumbnail" src="{{promotion.image}}" alt="Buffet"></a>
                 </div>
             </div>
         </div>
