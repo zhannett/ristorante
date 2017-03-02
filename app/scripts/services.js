@@ -11,7 +11,7 @@ angular.module('confusionApp')
                     }
                 });
             };
-            this.getPromotions = function () {
+            this.getPromotion = function () {
                 return $resource(baseUrl + 'promotions/:id', null, {
                     'update': {
                         method: 'PUT'

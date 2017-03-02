@@ -59,11 +59,11 @@ angular.module('confusionApp')
                     .$promise.then(
                         function (response) {
                             self.newFeedback = response;
-                        })
-                    .catch(function (error) {
-                        self.newPostError = true;
-                        //throw err;
-                    });
+                        }),
+                        function(response) {
+                            $scope.message = 'Error: ' + response.status + ' ' + response.statusText;
+                        }
+                    );
                 $scope.invalidChannelSelection = false;
                 $scope.feedback = {mychannel: "", firstName: "", lastName: "", agree: false, email: "" };
                 $scope.feedback.mychannel = '';
@@ -117,7 +117,7 @@ angular.module('confusionApp')
                         $scope.message = 'Error: ' + response.status + ' ' + response.statusText;
                     }
                 );
-            menuFactory.getPromotions().get({id: 0})
+            menuFactory.getPromotion().get({id: 0})
                 .$promise.then(
                     function(response) {
                         $scope.promotion = response;
@@ -140,13 +140,13 @@ angular.module('confusionApp')
 
     .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
         corporateFactory.getLeaders().query(
-                function(response) {
-                    $scope.leaders = response;
-                    $scope.showLeaders = true;
-                },
-                function(response) {
-                    $scope.message = 'Error: ' + response.status + ' ' + response.statusText;
-                }
-            );
+            function(response) {
+                $scope.leaders = response;
+                $scope.showLeaders = true;
+            },
+            function(response) {
+                $scope.message = 'Error: ' + response.status + ' ' + response.statusText;
+            }
+        );
     }]);
 
