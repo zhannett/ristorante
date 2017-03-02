@@ -11,14 +11,14 @@
             </div>
             <div class="media" ng-if="showDish">
                 <div class="media-left media-middle">
-                    <a href="#"><img class="media-object img-thumbnail" src="{{featuredImage}}" alt="{{featuredName}}"></a>
+                    <a href="#"><img class="media-object img-thumbnail" src="{{dish.image}}" alt="{{dish.name}}"></a>
                 </div>
                 <div class="media-body">
                     <h2 class="media-heading">
-                        {{featuredDish.featuredName}}  <span class="label label-danger">{{featuredLabel}}</span>
-                        <span class="badge">{{featuredPrice}}</span>
+                        {{dish.name}}  <span class="label label-danger">{{dish.label}}</span>
+                        <span class="badge">{{dish.price}}</span>
                     </h2>
-                    <p>{{featuredDescription}}</p>
+                    <p>{{dish.description}}</p>
                 </div>
             </div>
         </div>
@@ -32,21 +32,21 @@
         <div class="col-xs-12 col-sm-9">
             <div class="media">
                 <div class="media-body">
-                    <h2>{{promotions.name}}
-                        <span class="label label-danger"> {{promotions.label}}</span>
-                        <span class="badge">{{promotions.price}}</span>
+                    <h2>{{promotion.name}}
+                        <span class="label label-danger"> {{promotion.label}}</span>
+                        <span class="badge">{{promotion.price}}</span>
                     </h2>
-                    <p>{{promotions.description}}</p>
+                    <p>{{promotion.description}}</p>
                 </div>
                 <div class="media-left media-middle">
-                    <a href="#"><img class="media-object img-thumbnail" src="{{image}}" alt="Buffet"></a>
+                    <a href="#"><img class="media-object img-thumbnail" src="{{promotion.image}}" alt="Buffet"></a>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="row row-content" ng-controller="AboutController">
+    <div class="row row-content" ng-controller="IndexController">
         <div class="col-xs-12 col-sm-3 col-sm-push-9">
             <p style="padding:20px;"></p>
             <h3 align=center>Meet our Culinary Specialists</h3>
@@ -54,11 +54,11 @@
         <div class="col-xs-12 col-sm-9 col-sm-pull-3">
             <div class="media">
                 <div class="media-left media-middle">
-                    <a href="#"><img class="media-object img-thumbnail" src="{{chief.image}}" alt="{{chief.name}}"></a>
+                    <a href="#"><img class="media-object img-thumbnail" src="{{leader.image}}" alt="{{leader.name}}"></a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">{{chief.name}} <small> {{chief.designation}}</small></h4>
-                    <p>{{chief.description}}</p>
+                    <h4 class="media-heading">{{leader.name}} <small> {{leader.designation}}</small></h4>
+                    <p>{{leader.description}}</p>
                 </div>
             </div>
         </div>
